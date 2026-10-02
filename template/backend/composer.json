@@ -9,15 +9,6 @@
         "laravel/framework": "^13.17",
         "reyhan-commerce/core": "^1.0 || dev-main"
     },
-    "repositories": [
-        {
-            "type": "path",
-            "url": "/home/farshid/Desktop/projects/reyhan/packages/core",
-            "options": {
-                "symlink": true
-            }
-        }
-    ],
     "require-dev": {
         "fakerphp/faker": "^1.23",
         "laravel/pail": "^1.2.5",
