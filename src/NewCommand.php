@@ -139,7 +139,7 @@ final class NewCommand extends Command
 
         note(<<<TEXT
 Next steps to launch your store:
-  1. cd {$name}/backend
+  1. cd {$name}
   2. php artisan serve
 
 Admin Backoffice:    http://localhost:8000/admin (Default staff: admin@reyhan.test / password)
