@@ -1,38 +1,66 @@
-# create-reyhan 🌿
+# Reyhan Commerce Installer
 
-> Interactive TUI Scaffolder & CLI Installer for **Reyhan Commerce** (Laravel 13 + Nuxt 4)
-
-[![npm version](https://img.shields.io/npm/v/create-reyhan.svg)](https://www.npmjs.com/package/create-reyhan)
-[![License: MIT](https://img.shields.io/badge/License-MIT-emerald.svg)](LICENSE)
+The official Composer CLI installer for **Reyhan Commerce** — the sovereign, full-stack headless e-commerce framework for Iran.
 
 ---
 
-## ⚡ Instant Usage
+## 🚀 Installation
 
-Scaffold a brand-new, enterprise-grade headless store in seconds:
+Install the Reyhan CLI globally via Composer:
 
 ```bash
-# With npx
-npx create-reyhan@latest my-store
+composer global require reyhan-commerce/installer
+```
 
-# Or with pnpm
-pnpm create reyhan my-store
+Ensure your global Composer `bin` directory is in your system's `$PATH`:
+- **macOS / Linux**: `~/.config/composer/vendor/bin` or `~/.composer/vendor/bin`
+- **Windows**: `%USERPROFILE%\AppData\Roaming\Composer\vendor\bin`
 
-# Or with yarn
-yarn create reyhan my-store
+---
+
+## 🛠️ Creating a New Project
+
+To scaffold a new Reyhan headless commerce application, run:
+
+```bash
+reyhan new my-store
+```
+
+The interactive wizard powered by **Laravel Prompts** will guide you through:
+1. Selecting your primary database engine (**PostgreSQL 17+** recommended, MySQL, SQLite).
+2. Choosing whether to seed the initial Iranian commerce demo catalog (provinces, cities, cosmetics/fashion categories, sample products).
+3. Automatic environment provisioning, application key generation, and database migrations.
+
+### Non-Interactive / Automation Flags
+
+You can bypass interactive prompts in CI/CD pipelines or automated provisioning:
+
+```bash
+# Provision with PostgreSQL and automatic demo catalog seed
+reyhan new my-store --pgsql --seed --no-interaction
+
+# Provision with SQLite for local rapid prototyping
+reyhan new test-store --sqlite --seed --no-interaction
 ```
 
 ---
 
-## 🚀 Features
+## ⚡ Direct Composer Create-Project
 
-- **Interactive Guided Prompts:** Choose your project name, brand styling, and PostgreSQL/Redis connection settings via `@clack/prompts`.
-- **BYOD (Bring Your Own Database):** Connect seamlessly to your existing PostgreSQL 17+ and Redis 7+ servers without forced local installation.
-- **Automated Monorepo Provisioning:** Sets up the Laravel 13 backend engine, Nuxt 4 storefront layer, and root `./reyhan` orchestrator CLI.
-- **Production-Ready Defaults:** Includes zero-downtime update pipeline, Filament 5 admin panel, and SSR-optimized frontend.
+If you prefer not to install the global CLI, you can create a new Reyhan project directly via Composer:
+
+```bash
+composer create-project reyhan-commerce/reyhan my-store
+```
+
+---
+
+## 📖 Documentation
+
+For full guides and architecture specifications, visit the [Reyhan Commerce Documentation Portal](https://reyhan.io/docs).
 
 ---
 
 ## 📄 License
 
-MIT © [Reyhan Commerce Team](https://github.com/reyhan-commerce)
+Reyhan Commerce Installer is open-sourced software licensed under the [MIT license](LICENSE).

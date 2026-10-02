@@ -1,0 +1,21 @@
+#!/usr/bin/env php
+<?php
+
+declare(strict_types=1);
+
+if (file_exists(__DIR__.'/../vendor/autoload.php')) {
+    require __DIR__.'/../vendor/autoload.php';
+} elseif (file_exists(__DIR__.'/../../../autoload.php')) {
+    require __DIR__.'/../../../autoload.php';
+} else {
+    fwrite(STDERR, "Dependencies missing. Please run 'composer install' inside the installer directory.\n");
+    exit(1);
+}
+
+use Reyhan\Installer\Console\NewCommand;
+use Symfony\Component\Console\Application;
+
+$app = new Application('Reyhan Commerce Installer', '1.0.0');
+$app->add(new NewCommand());
+$app->setDefaultCommand('new');
+$app->run();

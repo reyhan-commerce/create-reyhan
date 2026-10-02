@@ -1,0 +1,28 @@
+{
+    "name": "reyhan-commerce/installer",
+    "description": "The official Composer CLI installer for the Reyhan Commerce Framework.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Farshid & Reyhan Contributors",
+            "email": "dev@reyhan.io"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "symfony/console": "^7.0|^6.4",
+        "symfony/process": "^7.0|^6.4",
+        "laravel/prompts": "^0.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Reyhan\\Installer\\Console\\": "src/"
+        }
+    },
+    "bin": [
+        "bin/reyhan"
+    ],
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
