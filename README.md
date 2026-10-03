@@ -2,7 +2,7 @@
 
 <img src="art/banner.png" alt="Reyhan Commerce Installer" width="780" style="max-width: 100%; border-radius: 12px; margin-bottom: 24px;" />
 
-# 🌿 Reyhan Commerce Installer (`reyhan-commerce/installer`)
+#  Reyhan Commerce Installer (`reyhan-commerce/installer`)
 
 ### The Official CLI Scaffolding Tool for Reyhan Commerce Framework
 **Quickly scaffold production-ready headless e-commerce stores with interactive Laravel Prompts**
