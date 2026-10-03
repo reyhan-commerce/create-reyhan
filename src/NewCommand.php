@@ -37,7 +37,7 @@ final class NewCommand extends Command
 
     protected function execute(InputInterface $input, OutputInterface $output): int
     {
-        intro('🌿 Reyhan Commerce — Modern Headless E-Commerce Framework');
+        intro('Reyhan Commerce — Modern Headless E-Commerce Framework');
 
         /** @var string|null $name */
         $name = $input->getArgument('name');

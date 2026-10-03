@@ -29,7 +29,7 @@ php bin/reyhan --version
 
 ---
 
-## 🌿 Pull Requests
+## Pull Requests
 
 1. Fork the repo and create a feature branch (`git checkout -b feature/interactive-flag`).
 2. Commit your changes with clear messages.
